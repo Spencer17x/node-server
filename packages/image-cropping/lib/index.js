@@ -1,3 +1,5 @@
-const startCropping = require('./cropping');
+// const startCropping = require('./cropping');
+//
+// startCropping('network');
 
-startCropping('network');
+require('./command');
