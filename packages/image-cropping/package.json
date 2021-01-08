@@ -5,17 +5,18 @@
   "author": "Spencer17x <1253478653@qq.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "bin": {
+    "outman-cropping": "bin/index.js"
+  },
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "lib"
   },
   "files": [
     "lib"
   ],
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
-    "start": "node lib/image-cropping.js"
+    "start": "nodemon lib/index.js"
   },
   "dependencies": {
     "request": "^2.88.2",
