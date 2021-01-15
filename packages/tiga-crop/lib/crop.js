@@ -28,10 +28,11 @@ const getBody = url => new Promise((resolve, reject) => {
  * 处理网络图片
  * @param url
  * @param outputFile
+ * @param source 图片来源network/local
  * @returns {Promise<unknown>}
  */
-async function startNetworkPicCrop(url, outputFile) {
-  const input = await getBody(url);
+async function startPicCrop(inputFile, outputFile, source) {
+  const input = ['local'].includes(source) ? inputFile : await getBody(path);
   const fileOut = path.resolve(outputFile); // 图片处理之后所保存的地址
   const bufferImage = await sharp(input).resize(200, 200).composite([{
     input: roundedCorners,
@@ -49,5 +50,5 @@ async function startNetworkPicCrop(url, outputFile) {
 }
 
 module.exports = {
-  startNetworkPicCrop
+	startPicCrop
 };
