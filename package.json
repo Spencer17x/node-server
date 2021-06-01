@@ -2,11 +2,20 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "bootstrap": "lerna bootstrap"
   },
   "devDependencies": {
     "git-cz": "^4.7.6",
     "lerna": "^3.22.1",
     "nodemon": "^2.0.7"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**"
+    ]
   }
 }

@@ -1,0 +1,21 @@
+<view 
+  class="pull-refresh"
+>
+  <scroll-view
+    class="pull-refresh-content"
+    id="pull-refresh-content"
+    refresher-enabled="{{ enabled }}"
+    refresher-triggered="{{ triggered }}"
+    scroll-y="{{ scrollY }}"
+    bindrefresherrefresh="bindrefresherrefresh"
+    bindscrolltolower="bindscrolltolower"
+  >
+    <slot></slot>
+  </scroll-view>
+
+  <view
+    class="pull-refresh-mask"
+    wx:if="{{ triggered }}"
+    catch:touchmove="{{ true }}"
+  ></view>
+</view>

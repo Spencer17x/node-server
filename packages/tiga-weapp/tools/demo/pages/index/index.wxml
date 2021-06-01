@@ -1,0 +1,15 @@
+<navigation-bar>
+  <view slot="status-bar">111</view>
+  <view slot="weapp-bar">1111</view>
+</navigation-bar>
+
+<pull-down-refresh
+  bindrefresh="refresh"
+  bindscrolltolower="bindscrolltolower"
+>
+  <view 
+    class="item"
+    wx:for="{{ list }}"
+    wx:key="index"  
+  >Hello World</view>
+</pull-down-refresh>

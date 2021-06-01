@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "pull-down-refresh": "../../components/pull-down-refresh/pull-down-refresh",
+    "navigation-bar": "../../components/navigation-bar/navigation-bar"
+  },
+  "navigationStyle": "custom"
+}

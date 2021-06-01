@@ -1,0 +1,11 @@
+.list {
+  position: absolute;
+  width: 100%;
+}
+
+.item {
+  padding: 40rpx;
+  background-color: rgb(141, 95, 95);
+  color: #fff;
+  border-bottom: 2px solid #ccc;
+}
