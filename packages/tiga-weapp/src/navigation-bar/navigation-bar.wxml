@@ -1,14 +1,16 @@
-<view class="navigation-bar">
-  <view class="navigation-status-bar" style="height:{{statusBarHeight}}px">
-    <slot name="status-bar"></slot>
+<view class="navigation-bar" style="z-index:{{zIndex}}">
+  <view class="navigation-bar-common status-bar-class" style="height:{{statusBarHeight}}px"></view>
+  <view class="navigation-bar-common weapp-bar-class" style="height:{{navigationBarHeight}}px">
+    <slot></slot>
   </view>
-  <view class="navigation-weapp-bar" style="height:{{navigationBarHeight}}px">
-    <slot name="weapp-bar"></slot>
-  </view>
+</view>
+
+<view>
+
 </view>
 
 <view
   wx:if="{{placeholder}}"
   class="navbar-placeholder"
-  style="margin-bottom: {{statusBarHeight + navigationBarHeight}}px"
+  style="height: {{statusBarHeight + navigationBarHeight}}px"
 ></view>

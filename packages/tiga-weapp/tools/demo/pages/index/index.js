@@ -11,6 +11,7 @@ Page({
     setTimeout(() => {
       console.log(e);
       e.detail.end();
+      wx.showLoading()
     }, 3000)
   },
 
@@ -23,7 +24,9 @@ Page({
 
   fetchList() {
     return new Promise(resolve => {
-      wx.showLoading();
+      wx.showLoading({
+        mask: true
+      });
       setTimeout(() => {
         this.setData({
           list: this.data.list.concat(

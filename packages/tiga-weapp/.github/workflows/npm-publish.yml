@@ -31,8 +31,8 @@ jobs:
         run: |
           yarn install
           yarn run build
-#      - name: publish package
-#        run: |
-#          npm publish --access public
-#        env:
-#          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      - name: publish package
+        run: |
+          npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}

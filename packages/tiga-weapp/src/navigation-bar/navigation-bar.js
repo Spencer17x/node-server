@@ -1,18 +1,18 @@
 Component({
 
-  options: {
-    multipleSlots: true // 在组件定义时的选项中启用多slot支持
-  },
-
   data: {
     statusBarHeight: 0, // 状态栏
-    navigationBarHeight: 0
+    navigationBarHeight: 0,
   },
 
   properties: {
     placeholder: {
       type: Boolean,
       value: true
+    },
+    zIndex: {
+      type: Number,
+      value: 1
     }
   },
 
@@ -28,5 +28,7 @@ Component({
         navigationBarHeight: gap * 2 + capsuleButton.height
       });
     }
-  }
+  },
+
+  externalClasses: ['status-bar-class', 'weapp-bar-class']
 })

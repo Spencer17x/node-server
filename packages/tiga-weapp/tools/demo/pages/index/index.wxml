@@ -1,7 +1,11 @@
-<navigation-bar>
-  <view slot="status-bar">111</view>
-  <view slot="weapp-bar">1111</view>
+<navigation-bar
+  status-bar-class="navigation-header1"
+  weapp-bar-class="navigation-header2"
+>
+  <view class="header">Hello World</view>
 </navigation-bar>
+
+<view style="position: fixed; top: 0;left:0;z-index: 10">z-index: 10</view>
 
 <pull-down-refresh
   bindrefresh="refresh"

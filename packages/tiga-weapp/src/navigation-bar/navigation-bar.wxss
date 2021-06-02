@@ -6,3 +6,8 @@
     position: fixed;
     background-color: #ccc;
 }
+
+.navigation-bar-common {
+    width: 100%;
+    background-color: #fff;
+}
